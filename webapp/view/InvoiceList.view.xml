@@ -1,0 +1,36 @@
+<mvc:View controllerName="sap.ui.demo.walkthrough.controller.InvoiceList" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
+    <Panel>
+        <content>
+            <Table items="{/contacts}" id="contactList" inset="true" growing="true" growingScrollToLoad="true" alternateRowColors="true">
+                <columns>
+                    <Column>
+                        <Text text="Nome" />
+                    </Column>
+                    <Column>
+                        <Text text="Sobrenome" />
+                    </Column>
+                    <Column>
+                        <Text text="Telefone" />
+                    </Column>
+                    <Column>
+                        <Text text="E-mail" />
+                    </Column>
+                    <Column>
+                        <Text text="Ação" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{name}"></Text>
+                            <Text text="{sobrenome}"></Text>
+                            <Text text="{telefone}"></Text>
+                            <Text text="{email}"></Text>
+                            <Button text="Excluir" icon="sap-icon://delete" press=".deleteContact(${id})" class="sapUiSmallMarginEnd" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Panel>
+</mvc:View>
